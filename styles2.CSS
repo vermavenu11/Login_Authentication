@@ -1,0 +1,44 @@
+
+h1{
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+	 font-size: 90px;
+	 text-align: center;
+	vertical-align: middle;
+
+  background: -webkit-linear-gradient(#f52525, #d723f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+	.wrapper {
+    text-align: center;
+}
+
+.button {
+    position:absolute;
+    top: 40%;
+    border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}

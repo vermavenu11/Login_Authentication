@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+
+	<style type="text/css">
+		*{
+			text-align: center;
+		}
+		p{
+			font-size: 4em;
+			text-transform: uppercase;
+		}
+		.btn {
+			cursor: pointer;
+			margin: 0 auto;
+			width: fit-content;
+		    border-radius: 20px;
+			border: 1px solid #FF4B2B;
+			background-color: #FF4B2B;
+			color: #FFFFFF;
+			font-size: 12px;
+			font-weight: bold;
+			padding: 12px 45px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			transition: transform 80ms ease-in;
+		}
+
+		.btn:hover{
+			background: #fff;
+			color: #ff4b2b
+		}
+
+	</style>
+</head>
+<body>
+
+	<p>welcome</p>
+
+	<div class="btn" onclick="signout()">Logout</div>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDG7GEX2EWxmbtI2Te1gQiJsRknp4BfhjI",
+    authDomain: "weblogin-6fb35.firebaseapp.com",
+    databaseURL: "https://weblogin-6fb35.firebaseio.com",
+    projectId: "weblogin-6fb35",
+    storageBucket: "weblogin-6fb35.appspot.com",
+    messagingSenderId: "972946597210",
+    appId: "1:972946597210:web:05fcbff9df756d03473f63",
+    measurementId: "G-HF5S3YFF54"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+<script type="text/javascript">
+	function signout(){
+  firebase.auth().signOut().then(function() {
+      // Sign-out successful.
+      window.location.href = 'login.html';
+    }).catch(function(error) {
+      // An error happened.
+      alert(error);
+  });
+}
+</script>
+
+</body>
+</html>
